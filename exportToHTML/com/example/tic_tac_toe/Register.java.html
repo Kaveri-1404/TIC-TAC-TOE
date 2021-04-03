@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Register.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Register.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.tic_tac_toe</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">android.os.Bundle</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">android.view.View</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Register </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+    <span class="s1">EditText name</span><span class="s0">,</span><span class="s1">email</span><span class="s0">,</span><span class="s1">pass</span><span class="s0">;</span>
+    <span class="s1">Button Reg</span><span class="s0">;</span>
+    <span class="s1">TextView lbtn</span><span class="s0">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentVieRegw(R.layout.activity_register)</span><span class="s0">;</span>
+        <span class="s1">name=findViewById(R.id.name)</span><span class="s0">;</span>
+        <span class="s1">email=findViewById(R.id.email)</span><span class="s0">;</span>
+        <span class="s1">pass=findViewById(R.id.pass)</span><span class="s0">;</span>
+        <span class="s1">lbtn=findViewById(R.id.lbtn)</span><span class="s0">;</span>
+
+        <span class="s1">Reg=findViewById(R.id.login)</span><span class="s0">;</span>
+        <span class="s1">Reg.SetOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener(){</span>
+        <span class="s1">@Override</span>
+        <span class="s0">protected void </span><span class="s1">onClick(View v)</span>
+         <span class="s1">String name</span><span class="s0">,</span><span class="s1">email</span><span class="s0">,</span><span class="s1">pass</span><span class="s0">;</span>
+
+            <span class="s1">name= name.getText().toString</span><span class="s0">;</span>
+            <span class="s1">mail= email.getText().toString</span><span class="s0">;</span>
+            <span class="s1">pas=pass.getText().toString()</span><span class="s0">;</span>
+
+            <span class="s0">if </span><span class="s1">(name.equals(</span><span class="s2">&quot;&quot;</span><span class="s1">))</span>
+
+            <span class="s1">{</span>
+                <span class="s1">Toast.makeText(context :Register.</span><span class="s0">this, </span><span class="s1">resid:</span><span class="s2">&quot;name is Blank.Toast.LENGTH_LONG&quot;</span><span class="s1">).</span>
+                <span class="s1">SHOW()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+             <span class="s0">if </span><span class="s1">(mail.equals(</span><span class="s2">&quot;&quot;</span><span class="s1">))</span>
+
+            <span class="s1">{</span>
+                <span class="s1">Toast.makeText(context :Register.</span><span class="s0">this, </span><span class="s1">resid:</span><span class="s2">&quot;email is Blank.Toast.LENGTH_LONG&quot;</span><span class="s1">).</span>
+                <span class="s1">SHOW()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+              <span class="s0">if </span><span class="s1">(pass.equals(</span><span class="s2">&quot;&quot;</span><span class="s1">))</span>
+
+            <span class="s1">{</span>
+                <span class="s1">Toast.makeText(context :Register.</span><span class="s0">this, </span><span class="s1">resid:</span><span class="s2">&quot;Password is Blank.Toast.LENGTH_LONG&quot;</span><span class="s1">).</span>
+                <span class="s1">SHOW()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+               <span class="s1">lbtn.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener(){</span>
+                <span class="s1">@Override</span>
+                <span class="s0">public void </span><span class="s1">onClick(View v){</span>
+                    <span class="s1">Intent i=</span><span class="s0">new </span><span class="s1">Intent(packageContext:Rgister.</span><span class="s0">this,</span><span class="s1">GameActivity.</span><span class="s0">class</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">startActivity(i)</span><span class="s0">;</span>
+                    <span class="s1">finish()</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+    <span class="s1">})</span><span class="s0">;</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
